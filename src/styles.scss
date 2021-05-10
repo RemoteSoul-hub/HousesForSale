@@ -4,50 +4,49 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(62, 62, 231, 1) 48%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-image: url("https://s1.1zoom.me/big0/430/Painting_Art_Houses_445222.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
   width: 100vw;
-  height: auto;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 34%,
-    rgba(44, 32, 157, 1) 67%,
-    rgba(31, 245, 245, 1) 100%
-  );
+  height: 260px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-size: 2em;
-  border-bottom: 5px solid white;
-  a {
-    text-decoration: none;
-    color: black;
-    background-color: darken($color: #00d4ff, $amount: 1);
-  }
+  border-bottom: 5px solid black;
+  background-color: white;
   .logo-box {
-    background-image: url("./assets/logo.jpg");
-    height: 200px;
-    width: 250px;
+    background-image: url("./assets/logo.png");
+    height: 250px;
+    width: 400px;
     background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px 20px;
+    background-size: contain;
+    background-position-y: center;
+    margin: -20px 20px;
     align-self: flex-start;
+    @media screen and (max-width: 497px) {
+      width: 200px;
+      margin-left: 4px;
+      margin-top: 7px;
+    }
   }
 
   .link-box {
-    height: 80px;
+    height: 100px;
     margin: 10px;
-    align-self: flex-start;
-    border: 1px dotted grey;
+    align-self: flex-end;
+    // border: 1px dotted grey;
+    button {
+      border-radius: 9px;
+      width: 100px;
+      height: 30px;
+      background-color: #415d65;
+      color: white;
+      text-align: center;
+    }
   }
 }
