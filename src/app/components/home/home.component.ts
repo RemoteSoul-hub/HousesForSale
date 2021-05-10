@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HousesService } from '../../services/houses.service';
+import { House } from '../../services/house.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,13 +8,14 @@ import { HousesService } from '../../services/houses.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private housesService: HousesService) { }
+  houses: House[];
 
-  ngOnInit(): void {
+  constructor(private housesService: HousesService) { 
+    this.houses = [];
   }
 
-  getHouses() {
-    
+  ngOnInit(): void {
+    this.houses = this.housesService.getHouses();
   }
 
 }

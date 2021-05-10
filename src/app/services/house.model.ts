@@ -1,6 +1,6 @@
 export interface House
     { 
-        Price: number;
-        Avail: boolean;
-        Location: string;
+        price: number;
+        avail: boolean;
+        location: string
     }; 

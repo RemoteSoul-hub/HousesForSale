@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div>
+    <div *ngFor="let house of houses" class="house-results">
+        <div class="price">{{ house.price }}</div>
+        <div class="avail">{{ house.avail }}</div>
+        <div class="location">{{ house.location }}</div>
+    </div>
+</div>
