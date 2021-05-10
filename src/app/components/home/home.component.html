@@ -1,7 +1,49 @@
-<div>
-    <div *ngFor="let house of houses" class="house-results">
-        <div class="price">{{ house.price }}</div>
-        <div class="avail">{{ house.avail }}</div>
-        <div class="location">{{ house.location }}</div>
+<div class="outer_container">
+
+    <div class="big_container">
+      <div class="top_bar">
+        <span>Find Houses</span>
+      </div>
+      <div class="transparent_bg">
+        <div class="container">
+          <div class="search_pane"> 
+            <div class="search_box">
+              <select>
+                <option value="" disabled selected>Price</option>
+                <option value="nyc" >"100-"</option>
+                <option value="london" >"200+"</option>
+                <option value="lax" >"300+"</option>
+              </select>
+            </div>
+            <div class="search_box">
+              <select>
+                <option value="" disabled selected>Location</option>
+                <option value="nyc" >Tampa</option>
+                <option value="london" >New York</option>
+                <option value="lax" >Los Angeles</option>
+              </select>
+            </div>
+            <div class="search_box">
+              <button>Go</button>
+            </div>
+          </div>
+          <div class="house_pane">  
+            <div class="house_headers">
+              <div class="price cell"> Price </div>
+              <div class="avail cell"> Availability </div>
+              <div class="location cell"> Address </div>
+            </div>
+            
+            <div *ngFor="let house of houses" class="house_results">
+              <div class="price cell"> {{house.price }}</div>
+              <div class="avail cell"> {{ house.avail }}</div>
+              <div class="location cell"> {{house.location}}</div>
+            </div>
+            <div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+    </div>
