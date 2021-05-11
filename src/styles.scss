@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-image: url("https://s1.1zoom.me/big0/430/Painting_Art_Houses_445222.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 6px solid black;
 }
 
 header {
